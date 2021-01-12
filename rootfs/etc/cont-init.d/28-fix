@@ -20,7 +20,7 @@
     sed -i "s@^\(on-download-complete=\).*@\1${SCRIPT_DIR}/clean.sh@" ${ARIA2_CONF}
 }
 
-sed -i "s@^\(dir=\).*@\1/downloads@" ${ARIA2_CONF}
+# sed -i "s@^\(dir=\).*@\1/downloads@" ${ARIA2_CONF}
 sed -i "s@^\(input-file=\).*@\1${ARIA2_CONF_DIR}/aria2.session@" ${ARIA2_CONF}
 sed -i "s@^\(save-session=\).*@\1${ARIA2_CONF_DIR}/aria2.session@" ${ARIA2_CONF}
 sed -i "s@^\(dht-file-path=\).*@\1${ARIA2_CONF_DIR}/dht.dat@" ${ARIA2_CONF}

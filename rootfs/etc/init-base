@@ -44,7 +44,7 @@ CONVERSION_ARIA2_CONF() {
     sed -i "s@^\(rpc-listen-port=\).*@\1${RPC_PORT:-6800}@" "${ARIA2_CONF}"
     sed -i "s@^\(listen-port=\).*@\1${LISTEN_PORT:-6888}@" "${ARIA2_CONF}"
     sed -i "s@^\(dht-listen-port=\).*@\1${LISTEN_PORT:-6888}@" "${ARIA2_CONF}"
-    sed -i "s@^\(dir=\).*@\1/downloads@" "${ARIA2_CONF}"
+    # sed -i "s@^\(dir=\).*@\1/downloads@" "${ARIA2_CONF}"
     sed -i "s@/root/.aria2@${ARIA2_CONF_DIR}@" "${ARIA2_CONF}"
     sed -i "s@^#\(retry-on-.*=\).*@\1true@" "${ARIA2_CONF}"
     sed -i "s@^\(max-connection-per-server=\).*@\132@" "${ARIA2_CONF}"
