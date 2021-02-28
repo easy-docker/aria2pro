@@ -4,18 +4,17 @@
 #  / ___ \| |  | | (_| |/ __/  |  __/| | | (_) |
 # /_/   \_\_|  |_|\__,_|_____| |_|   |_|  \___/
 #
-# https://github.com/P3TERX/Docker-Aria2-Pro
+# https://github.com/P3TERX/Aria2-Pro-Docker
 #
-# Copyright (c) 2020 P3TERX <https://p3terx.com>
+# Copyright (c) 2020-2021 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 
 FROM p3terx/s6-alpine
 
-RUN apk add --no-cache jq findutils dpkg && \
+RUN apk add --no-cache jq findutils && \
     curl -fsSL git.io/aria2c.sh | bash && \
-    apk del --purge dpkg && \
     rm -rf /var/cache/apk/* /tmp/*
 
 COPY rootfs /
