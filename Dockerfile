@@ -13,5 +13,5 @@
 
 FROM p3terx/aria2-pro
 
-RUN sed -i '/dir=/d' /etc/cont-init.d/28-fix && \
+RUN sed -i '/(dir=/d' /etc/cont-init.d/28-fix && \
     sed -i '/(dir=/d' /etc/init-base
